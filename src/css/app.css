@@ -140,6 +140,9 @@ a {
   font-size: 24px !important;
   line-height: 1.5em !important; }
 
+.artist-caption {
+  font-size: 16px !important; }
+
 body {
   font-family: "Raleway", sans-serif; }
 
@@ -359,7 +362,9 @@ section {
   -o-justify-content: space-between;
   justify-content: space-between;
   -ms-flex-pack: justify;
-  width: 188px; }
+  position: relative;
+  width: 188px;
+  z-index: 2; }
   .filter-item {
     height: 44px;
     width: 88px; }
