@@ -1,0 +1,45 @@
+.gallery {
+  @include display(flex);
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  width: 100%;
+
+  @include mq(medium) {
+    @include flex-direction(row);
+
+  }
+
+  @include e(item) {
+    @include padding(em(6px));
+    width: 50%;
+    @include mq(medium) {
+
+      width: 33%;
+    }
+    @include mq(large) {
+       width: 25%;
+     }
+    @include mq(hd) {
+      width: 20%;
+    }
+  }
+
+  @include e(image) {
+    border-radius: em(2px);
+    box-shadow: 0 0 4px $black;
+    height: 100%;
+    transition: $trns-duration;
+    width: 100%;
+
+    &.flick {
+
+    }
+
+    &:hover {
+      @include transform(scale(1.05) rotate(-1deg));
+      box-shadow: 0 0 12px $black;
+    }
+  }
+}
+
+

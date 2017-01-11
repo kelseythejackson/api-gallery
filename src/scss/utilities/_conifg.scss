@@ -1,0 +1,60 @@
+//
+// Global Config
+//
+
+// Font Stacks
+
+$font-url-google: 'https://fonts.googleapis.com/css?family=Raleway:200,400,500,600';
+$font-family: 'Raleway', sans-serif;
+
+// Font Weights
+
+$font-weight-thin: 200;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+
+// Base Colors
+
+$white: #fff;
+$black: #000;
+$emerald: #44d081;
+$mullberry: #d04493;
+$mine-shaft: #343434;
+$mountain-meadow: #21ae5e;
+$shakespeare: #44b1d0;
+
+// Text
+
+$base-font-size: 16px;
+$base-line: 24px;
+$letter-space: 1px;
+
+
+// Border radius
+
+$br-default: .4em;
+$br-round: 50%;
+
+// Transitions
+
+$trns-duration: .3s;
+
+// Path to Assets
+
+$path--rel: '../img';
+
+// Grid
+
+$g-col-width: 65px !default;
+$g-gutter-width: 20px !default;
+$g-col-count: 12 !default;
+$g-cont-max-w: 1200px !default;
+
+// Breakpoints
+
+$brkpoint-sm: 1px;
+$brkpoint-smallish: 320px;
+$brkpoint-md: 768px;
+$brkpoint-lg: 1024px;
+$brkpoint-hd: 1440px;

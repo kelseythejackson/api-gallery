@@ -1,0 +1,80 @@
+.lightbox {
+  @include display(flex);
+  @include flex-direction(column);
+  @include margin(em(12px));
+  @include position(relative);
+  //box-shadow: 0 0 16px rgba($black, .75);
+  max-width: 320px;
+  transition: 1.5s ease-in-out;
+
+  @include mq(medium) {
+    max-width: 400px;
+  }
+
+
+}
+
+.lb {
+  @include e(img) {
+    @include border-top-radius(5px);
+    //max-height: 296px;
+    transition: 1s;
+    width: 100%;
+
+    &.hide {
+      display: none;
+    }
+  }
+
+  @include e(info) {
+    @include border-bottom-radius(5px);
+    @include padding(12px 12px null 12px);
+    background-color: $shakespeare;
+    color: $white;
+  }
+}
+
+.btn {
+  @include e(holder) {
+    @include align-items(center);
+    @include display(flex);
+    @include margin(em(24px) null null null);
+    @include justify-content(space-between);
+    height: 44px;
+  }
+
+  @include  e(prev) {
+    @include align-items(baseline);
+    @include display(flex);
+    @include justify-content(space-between);
+    height: 100%;
+    //text-shadow: 0 0 2px rgba($black, .5);
+    width: 60px;
+  }
+
+  @include  e(next) {
+    @include align-items(baseline);
+    @include display(flex);
+    @include justify-content(space-between);
+    height: 100%;
+    //text-shadow: 0 0 8px rgba(darken($shakespeare, 50%), .5);
+    width: 60px;
+  }
+
+  @include e(close) {
+    @include position(absolute, em(4px) em(4px) null null);
+    color: $white;
+    font-size: em(44px);
+  }
+}
+
+.album {
+  @include e(name) {
+    @include margin(null null em(6px) null);
+    font-size: em(28px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 250px;
+  }
+}

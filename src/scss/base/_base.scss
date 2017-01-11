@@ -1,0 +1,48 @@
+body {
+  font-family: $font-family;
+}
+
+header {
+  @include align-items(center);
+  @include display(flex);
+  @include justify-content(center);
+  //@include linear-gradient(-180deg, $emerald 0%, $mountain-meadow 100%);
+  @include padding(em(12px));
+  background-color: $shakespeare;
+  height: 120px;
+
+}
+
+
+h1 {
+  color: $white;
+  font-size: em(40px);
+  font-weight: $font-weight-thin;
+  text-align: center;
+}
+
+h2 {
+  @include margin(em(12px) null em(24px) null);
+  color: $mine-shaft;
+  font-size: em(24px);
+  font-weight: $font-weight-regular;
+  letter-spacing: $letter-space;
+  text-align: center;
+
+  @include mq(medium) {
+    @include margin(0);
+  }
+}
+
+p {
+  @include margin(null null em(6px) null);
+}
+
+
+
+section {
+  @include margin(auto);
+  @include padding(em(24px));
+  max-width: 1440px;
+}
+

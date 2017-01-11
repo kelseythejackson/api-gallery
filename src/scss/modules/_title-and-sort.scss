@@ -1,0 +1,109 @@
+.title-and-sort {
+  @include align-items(center);
+  @include display(flex);
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include margin(null null em(24px) null);
+  width: 100%;
+
+  @include mq(medium) {
+    @include flex-direction(row);
+    @include justify-content(space-between);
+  }
+}
+
+.sort {
+  @include align-items(center);
+  @include display(flex);
+  @include flex-direction(column);
+  @include justify-content(center);
+
+  @include e(text) {
+    @include margin(null null em(12px) null);
+    @include mq(medium) {
+      @include margin(null em(12px) 0 null);
+    }
+
+  }
+  @include mq(medium) {
+    @include align-items(center);
+    @include flex-direction(row);
+    @include justify-content(space-between);
+  }
+
+}
+
+.filter {
+  @include display(flex);
+  @include flex-direction(row);
+  @include justify-content(space-between);
+
+  width: 188px;
+
+  @include e(item) {
+    height: 44px;
+    width: 88px;
+  }
+
+  @include e(label) {
+    height: 44px;
+    width: 88px;
+  }
+
+  @include e(input) {
+    display: none;
+
+    &:checked + .filter-text {
+      @include border-color($shakespeare);
+      background-color: $shakespeare;
+      color: $white;
+      font-weight: $font-weight-semibold;
+    }
+  }
+
+  @include e(text) {
+    @include align-items(center);
+    @include border-color(lighten($mine-shaft, 50%));
+    @include border-style(solid);
+    @include border-top-radius(em(28px));
+    @include border-bottom-radius(em(28px));
+    @include border-width(1px);
+    @include display(flex);
+    @include justify-content(center);
+    color: lighten($mine-shaft, 50%);
+    height: 44px;
+    transition: .2s;
+    width: 88px;
+
+    &:hover {
+      @include border-color($shakespeare);
+      background-color: $shakespeare;
+      color: $white;
+      font-weight: $font-weight-semibold;
+    }
+  }
+
+  //@include e(label) {
+  //  @include align-items(center);
+  //  @include border-color($mine-shaft);
+  //  @include border-style(solid);
+  //  @include border-top-radius(em(28px));
+  //  @include border-bottom-radius(em(28px));
+  //  @include border-width(1px);
+  //  @include display(flex);
+  //  @include justify-content(center);
+  //  min-height: 44px;
+  //  min-width: 88px;
+  //  transition: $trns-duration;
+  //
+  //  input:checked + .filter-text {
+  //    background-color: $shakespeare;
+  //  }
+  //}
+  //
+  //@include e(input) {
+  //  display: none;
+
+  //}
+}
+

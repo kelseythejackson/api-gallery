@@ -1,0 +1,26 @@
+.overlay {
+  @include display(flex);
+  @include justify-content(center);
+  @include padding(60px null null null);
+  @include position(fixed, null null null null);
+  //@include transform(scale3d(1, 1, 1));
+  background-color: rgba($black, .65);
+  //display: block;
+  height: 100vh;
+  opacity: 1;
+  transition: $trns-duration;
+  width: 100vw;
+  z-index: 1;
+
+  @include mq(medium) {
+    @include padding(124px null null null);
+  }
+
+  &.off {
+    //@include transform(scale3d(.9, .9, 1));
+    height: 0;
+    opacity: 0;
+  }
+}
+
+

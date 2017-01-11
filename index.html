@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Gallery</title>
+    <link rel="stylesheet" href="dist/css/app.min.css">
+    <link rel="stylesheet" href="dist/lib/lightbox/css/lightbox.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
+<body>
+<div class="overlay off"></div>
+<header>
+    <h1>API Gallery</h1>
+</header>
+<main>
+    <section class="albums">
+        <div class="title-and-sort">
+            <h2>Albums</h2>
+            <div class="sort">
+                <span class="sort-text">Sort by:</span>
+                <ul class="filter">
+                    <li class="filter-item">
+                        <label class="filter-label" for="title">
+                            <input id="title" class="filter-input" type="radio" name="filter" >
+                            <span class="filter-text">Title</span>
+                        </label>
+                    </li>
+                    <li class="filter-item">
+                        <label class="filter-label" for="artist">
+                            <input id="artist" class="filter-input" type="radio" name="filter">
+                            <span class="filter-text">Artist</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul id="music" class="gallery album">
+
+        </ul>
+
+
+    </section>
+    <section class="movies">
+        <div class="title-and-sort">
+            <h2>Star Wars Movies</h2>
+            <div class="sort">
+                <span class="sort-text">Sort by:</span>
+                <ul class="filter">
+                    <li class="filter-item">
+                        <label class="filter-label" for="film-title">
+                            <input id="film-title" class="filter-input" type="radio" name="filter" >
+                            <span class="filter-text">Title</span>
+                        </label>
+                    </li>
+                    <li class="filter-item">
+                        <label class="filter-label" for="film-year">
+                            <input id="film-year" class="filter-input" type="radio" name="filter">
+                            <span class="filter-text">Year</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul id="films" class="gallery movie">
+
+        </ul>
+    </section>
+</main>
+
+<script src="dist/lib/lightbox/js/lightbox-plus-jquery.min.js"></script>
+<script src="dist/js/app.min.js"></script>
+</body>
+</html>

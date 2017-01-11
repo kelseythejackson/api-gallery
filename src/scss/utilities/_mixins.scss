@@ -1,0 +1,86 @@
+// ==========================================================================
+// Mixins
+// ==========================================================================
+
+// BEM selectors
+
+@mixin e($element) {
+  &-#{$element} {
+    @content;
+  }
+}
+
+@mixin m($modifier) {
+  &-#{$modifier} {
+    @content;
+  }
+}
+
+// Media queries
+
+@mixin mq($break) {
+  @if $break == 'small' {
+    @media (min-width: $brkpoint-sm) and (max-width: $brkpoint-smallish) {
+      @content;
+    }
+  } @elseif $break == 'smallish' {
+    @media (min-width: $brkpoint-smallish) {
+      @content;
+    }
+  } @else if $break == 'medium' {
+    @media (min-width: $brkpoint-md) {
+      @content;
+    }
+  } @else if $break == 'large' {
+    @media (min-width: $brkpoint-lg) {
+      @content;
+    }
+  } @else if ($break == 'hd') {
+    @media (min-width: $brkpoint-hd) {
+      @content;
+    }
+  } @else {
+    @error 'No value could be retrieved for `#{$break}`. '
+  }
+}
+
+// Generate modifier color classes
+
+@mixin ui-colors($map, $p-el:null) {
+  @each $theme, $color in $map {
+    @include m($theme) {
+      background-color: $color;
+      transition: $trns-duration;
+
+      &:hover {
+        background-color: darken($color, 20%);
+      }
+    }
+  }
+}
+
+//// Generating :before or :after pseudo-element shapes
+//
+//@mixin p-el($el, $el-w: null, $el-h: null) {
+//  @if $el == 'before' or $el == 'after' {
+//    &::#{$el} {
+//      @extend %pseudos;
+//      height: $el-h;
+//      width: $el-w;
+//      @content;
+//    }
+//  } @else {
+//    @error '`#{$el}` is not a valid pseudo element.';
+//  }
+//}
+
+
+
+// Adjacent sibling margins
+
+@mixin doubly($margin: 1em) {
+  & + & {
+    margin-left: $margin;
+    @content;
+  }
+}
