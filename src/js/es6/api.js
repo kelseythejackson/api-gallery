@@ -46,7 +46,7 @@
         xhr.send();
 
         let xhr2 = new XMLHttpRequest(),
-            omdbURI = 'http://www.omdbapi.com/?s=star+wars&r=JSON';
+            omdbURI = 'https://www.omdbapi.com/?s=star+wars&r=JSON';
         xhr2.open('GET', encodeURI(omdbURI));
         xhr2.onreadystatechange = () => {
             if(xhr2.readyState === 4) {
