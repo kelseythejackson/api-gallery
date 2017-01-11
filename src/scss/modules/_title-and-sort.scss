@@ -38,7 +38,9 @@
   @include flex-direction(row);
   @include justify-content(space-between);
 
+  position: relative;
   width: 188px;
+  z-index: 2;
 
   @include e(item) {
     height: 44px;

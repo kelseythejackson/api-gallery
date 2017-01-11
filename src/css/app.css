@@ -362,7 +362,9 @@ section {
   -o-justify-content: space-between;
   justify-content: space-between;
   -ms-flex-pack: justify;
-  width: 188px; }
+  position: relative;
+  width: 188px;
+  z-index: 2; }
   .filter-item {
     height: 44px;
     width: 88px; }
